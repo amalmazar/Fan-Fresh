@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Trivia Game</title>
+
+<link href ="assets/css/reset.css" rel ="stylesheet">
+<link href ="assets/css/style.css" rel ="stylesheet">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src = "assets/javascript/app.js"></script>
+
+</head>
+
+
+<body>
+<div class= "header">
+
+<h1>Trivia Game</h1>
+
+</div>
+<br>
+<br>
+<br>
+
+ <div class="button">
+
+     <button type="button" class="btn btn-danger">Start</button>
+
+    </div>
+    
+<form id = "quiz" name = "quiz">
+
+    
+     
+<section id= "questions" style="height: 0; overflow: hidden;">
+
+    
+<div id="show-number"></div>
+
+<br>
+<br>
+
+
+<p class = "questions">Charles Dicken's Wrote which of the following books?</p>
+<input type = "radio" id = "mc" name = "question1" value = "A Land Before Time"> A Land Before Time<br>
+<input type = "radio" id = "mc" name = "question1" value = "Oliver Twist"> Oliver Twist<br>
+<input type = "radio" id = "mc" name = "question1" value = "Great Gatsby">Great Gatsby<br>
+<input type = "radio" id = "mc" name = "question1" value = "A Street Car Named Desire">A Street Car named Desire<br>
+
+<br>
+<br>
+
+
+<p class = "questions">What famous book did author Mark Twain write?</p>
+
+<input type = "radio" id = "mc" name = "question2" value = "Adventures of Huckleberry Finn"> Adventures of Huckleberry Finn<br>
+<input type = "radio" id = "mc" name = "question2" value = "Harry Potter"> Harry Potter<br>
+<input type = "radio" id = "mc" name = "question2" value = "A Tale of Two Cities"> A Tale of Two Cities<br>
+<input type = "radio" id = "mc" name = "question2" value = "The Bible"> The Bible<br>
+
+
+<br>
+<br>
+
+<p class = "questions">To Kill A MockingBird was written by which famous author?</p>
+
+<input type = "radio" id = "mc" name = "question3" value = "Jane Austen"> Jane Austen<br>
+<input type = "radio" id = "mc" name = "question3" value = "George Orwell"> George Orwell<br>
+<input type = "radio" id = "mc" name = "question3" value = "Harper Lee"> Harper Lee<br>
+<input type = "radio" id = "mc" name = "question3" value = "F. Scott Fitzgerald"> F. Scott Fitzgerald<br>
+
+
+<br>
+<br>
+
+<p class = "questions">1984 was written by which author?</p>
+
+<input type = "radio" id = "mc" name = "question4" value = "Charles Dickens"> Charles Dickens<br>
+<input type = "radio" id = "mc" name = "question4" value = "George Orwell"> George Orwell<br>
+<input type = "radio" id = "mc" name = "question4" value = "Ernest Hemmingway"> Ernest Hemmingway<br>
+<input type = "radio" id = "mc" name = "question4" value = "Stephen King"> Stephen King<br>
+    
+
+<br>
+<br>
+
+<input id = "button" type = "button" value = "I'm finished!" onclick = "check();">
+
+
+</form>
+
+<div id = "after_submit">
+<p id = "number_correct"></p>
+<p id = "message"></p>
+<img id = "picture">
+</div>
+
+</section>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+
+</body>
+    
+</html>
