@@ -21,35 +21,41 @@
         <!--Import Jquery-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script type="text/javascript">
-            // Adding click event listen listener to all buttons
-            $("button").on("click", function() {
-
-              // Constructing a queryURL
-              var queryURL = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + artist + "&api_key=3ff3b259d85abca5d13695ff68bfbe51&format=json";
-
-              // Performing an AJAX request with the queryURL
-              $.ajax({
-                  url: queryURL,
-                  method: "GET"
-                })
-                // After data comes back from the request
-                .done(function(response) {
-                  console.log(queryURL);
-                  console.log(response);
-                    });
-                });
-            $( document ).keypress(function(event) {
-                // if enter is pressed anywhere on the document
-                if(event.which == 13) {
-                    console.log("I AM CLICKED");
-                var artist = $("#search").val().trim();
-                    console.log(artist);
-                    console.log(queryURL);
-                };
-  
-           });
-                
             
+getArtist();
+            
+// make a function that runs the ajax call after the user inputs the artist
+        function getArtist() {
+            $( document ).keypress(function(event) {
+            
+                //if enter is pressed anywhere on the document
+                if(event.which == 13) {
+                    var artist = $("#search").val().trim();
+
+                    // Constructing a queryURL
+                    var queryURL = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + artist + "&api_key=3ff3b259d85abca5d13695ff68bfbe51&format=json";
+
+                    // Performing an AJAX request with the queryURL
+                    $.ajax({
+                      url: queryURL,
+                      method: "GET"
+                    })
+                    // After data comes back from the request
+                    .done(function(response) {
+                      console.log(queryURL);
+                      console.log(response);
+                      $("#artistName").html(response.artist.name);
+                      //console.log(response.artist.image[2]['#text']);
+                      $("#artistPhoto").html("<img src=" + response.artist.image[4]['#text'] +">");
+                    });
+                };
+            });
+        }
+
+//        function populateHTML() {
+//            $("#artistName").html(response.artist.name);
+//        }
+
         </script>
         <main>
             <!--Page Borders-->

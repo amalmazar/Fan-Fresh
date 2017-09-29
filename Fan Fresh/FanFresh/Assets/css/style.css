@@ -144,6 +144,18 @@ a:hover {
     margin: 20px;
 }
 
+#artistName {
+    font-weight: 700;
+    font-size: 150%;
+}
+
+#artistPhoto {
+    border: 0 !important;
+}
+#artistPhoto img {
+    border-radius: 100px;
+}
+
 /*//////////////////////////////// PAGE BORDERS-Please don't touch. /////////////////////////////////*/
 
 /*Resize the wrap to see the search bar change!*/
