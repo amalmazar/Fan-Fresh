@@ -5,61 +5,166 @@ Teal 1: #56c0cc
 Teal 2: #1ca5b8
 Light Blue: #daecf3
 Red: #ff404e
+Very Light Grey: #fcfcfc;
+Medium Grey: #f2f2f2;
 */
 
-body{
-    background: #f2f2f2;
+/*//////////////////////// GLOBAL BODY STYLES ////////////////////////////////*/
+
+html, body{
+    background-color: #fcfcfc !important;
     font-family: 'Open Sans', sans-serif !important;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
+ main {
+    flex: 1 0 auto;
+     margin-bottom: 100px;
+  }
+
+/* Links */
+a {
+    color: #56c0cc;
+}
+a:hover {
+    color: #1ca5b8;
+}
+
+/* Container */
 .container {
-    width: 100%;
-    background-color: #f2f2f2;
-    margin: 20px auto;
-    padding: 20px;
+    width: 100% !important;
 }
 
-.col {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.col img {
-    width: 400px;
-}
+/* Footer styles */
 
 .footer {
-    position: absolute;
-    bottom: 0%;
-    margin: 0px auto;
-    background-color: #daecf3;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 70px;
     width: 100%;
-    height: 90px;
+    margin: 0px auto;
+    padding: 10px 40px;
+    overflow: hidden;
+    background-color: #f2f2f2 !important;
     z-index: 0;
-    text-align: center;
-    padding: 20px;
+    text-align: left;
+    font-weight: 300;
+    color: #012d41;
+    font-size: 120%;
 }
 
-.input-field {
+.footer-text {
+    display: inline;
+    line-height: 25px;
+}
+.copyright {
+    float: left;
+    font-weight: 300;
+}
+.top-artists {
+    float: right;
+}
+
+
+
+/*//////////////////////////////// BODY STYLES ////////////////////////////////*/
+
+/* Index page search bar styles */
+.center {
     width: 400px;
     margin: 100px auto;
     background-color: #fff;
 }
 
-.input-field input[type=search] {
-    text-align: center;
+/* box holding the main search bar and logo */
+.main-search {
+    width: 100%;
+    background-color: #fcfcfc;
+    margin: 20px auto;
+    padding: 20px;
+    display: block;
 }
 
+/* Styles for the index page logo */
+.logo {
+    text-align: center;
+    margin-top: 30px;
+}
+.logo img {
+    width: 400px;
+}
+
+/*//////////////////////////////////////// Top navigation ////////////////////////////////////////*/
+/* Box holding all the top navigation elements */
+
+.top-search {
+    width: 100%;
+    padding: 20px;
+    display: none;
+}
+
+/* Logo */
+.logo-right {
+    float: right;
+    margin: 10px 30px;
+}
+.logo-right img {
+    width: 200px;
+}
+.top-left {
+    margin: 10px 5px;
+    width: 300px;
+}
+
+/* Search bar */
+.input-field input[type=search] {
+    text-align: center;
+    font-weight: 700;
+    background-color: #fff;
+}
 .input-field input[type=search]:focus {
     border-bottom: 3px solid #ff404e !important;
     color: #012d41;
     text-align: center;
 }
+
+/*////////////////////////////////// Fan Page Elements /////////////////////*/
+
+
+#fanpage {
+    display: none;
+}
+
 .material-icons {
     top: 8px !important;
 }
 
-/*//////////////////////////////// PAGE BORDERS /////////////////////////////////*/
+.content {
+    margin: 0 auto;
+}
+
+.artistdetails {
+    border: 1px solid red;
+    padding: 20px !important;
+    margin: 20px;
+}
+
+#artistName {
+    font-weight: 700;
+    font-size: 150%;
+}
+
+#artistPhoto {
+    border: 0 !important;
+}
+#artistPhoto img {
+    border-radius: 150px;
+}
+
+/*//////////////////////////////// PAGE BORDERS-Please don't touch. /////////////////////////////////*/
 
 /*Resize the wrap to see the search bar change!*/
 .wrap{
