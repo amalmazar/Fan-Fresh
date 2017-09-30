@@ -21,6 +21,7 @@ html, body{
 
  main {
     flex: 1 0 auto;
+     margin-bottom: 100px;
   }
 
 /* Links */
@@ -39,7 +40,7 @@ a:hover {
 /* Footer styles */
 
 .footer {
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
     height: 70px;
@@ -69,7 +70,7 @@ a:hover {
 
 
 
-/*//////////////////////////////// INDEX BODY STYLES ////////////////////////////////*/
+/*//////////////////////////////// BODY STYLES ////////////////////////////////*/
 
 /* Index page search bar styles */
 .center {
@@ -78,6 +79,14 @@ a:hover {
     background-color: #fff;
 }
 
+/* box holding the main search bar and logo */
+.main-search {
+    width: 100%;
+    background-color: #fcfcfc;
+    margin: 20px auto;
+    padding: 20px;
+    display: block;
+}
 
 /* Styles for the index page logo */
 .logo {
@@ -88,22 +97,13 @@ a:hover {
     width: 400px;
 }
 
-/* Index page container */
-.index-search {
-    width: 100%;
-    background-color: #fcfcfc;
-    margin: 20px auto;
-    padding: 20px;
-}
+/*//////////////////////////////////////// Top navigation ////////////////////////////////////////*/
+/* Box holding all the top navigation elements */
 
-
-
-/*//////////////////////////////// FRESH / TOP BODY STYLES ////////////////////////////////*/
-
-/* Navigation */
-.navigation {
+.top-search {
     width: 100%;
     padding: 20px;
+    display: none;
 }
 
 /* Logo */
@@ -130,6 +130,14 @@ a:hover {
     color: #012d41;
     text-align: center;
 }
+
+/*////////////////////////////////// Fan Page Elements /////////////////////*/
+
+
+#fanpage {
+    display: none;
+}
+
 .material-icons {
     top: 8px !important;
 }
@@ -153,7 +161,7 @@ a:hover {
     border: 0 !important;
 }
 #artistPhoto img {
-    border-radius: 100px;
+    border-radius: 150px;
 }
 
 /*//////////////////////////////// PAGE BORDERS-Please don't touch. /////////////////////////////////*/
