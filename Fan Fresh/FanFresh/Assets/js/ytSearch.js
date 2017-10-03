@@ -48,7 +48,7 @@ function init() {
 /////////////////////////////////////////////////////////////////
 function onYouTubeApiLoad() {  
  
-  gapi.client.setApiKey("AIzaSyDrC23NUzCmQfaisKqwmk0pTyomIJPwdbg");
+  gapi.client.setApiKey("API KEY GOES HERE");
   console.log("youTube API key is set");
   
  //ytVideoSearch()
