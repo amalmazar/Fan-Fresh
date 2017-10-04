@@ -42,7 +42,6 @@ function getArtist(whichInput) {
     });
 };
 
-
 function populatePhoto(imagetag) {
     $("#artistPhoto").html(imagetag);
 };

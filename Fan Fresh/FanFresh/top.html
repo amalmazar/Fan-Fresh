@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Fan Fresh Top Artists</title>
+        <title>Fan Fresh</title>
         <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans:300,400,700" rel="stylesheet">
         <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
@@ -25,28 +25,52 @@
             <div id="top"></div>
             <div id="bottom"></div>
 
-            <div class="navigation">
-                <div class="row">
+            <!--Top Navigation-->
+            <div class="container navigation-bar">
+                <div style="display: block;" class="row top-search">
                     <div class="logo-right">
                         <a href="index.html"><img src="assets/img/logo.png"></a>
                     </div>
-                    <div class="input-field z-depth-1 top-left">
-                        <input id="search" type="search" required>
-                        <label class="label-icon" for="search">
-                            <i class="material-icons">search</i>
-                        </label>
-                        <i class="material-icons">close</i>
-                    </div>
                 </div>
             </div>
-            <div class="container">
+            
+            <!--Favorite Artists Table-->
+             <div class="container">
                 <div class="row">
-                    <div class="content col s12">    
-                    
-                    </div>
+                    <table class="bordered">
+                        <thead>
+                          <tr>
+                              <th>Ranking</th>
+                              <th>Artist Name</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="bold">1</td>
+                            <td id="first">Drake</td>
+                          </tr>
+                          <tr>
+                            <td class="bold">2</td>
+                            <td id="second">Lady Gaga</td>
+                          </tr>
+                          <tr>
+                            <td class="bold">3</td>
+                            <td id="third">Gorillaz</td>
+                          </tr>
+                          <tr>
+                            <td class="bold">4</td>
+                            <td id="fourth">Gorillaz</td>
+                          </tr>
+                          <tr>
+                            <td class="bold">5</td>
+                            <td id="fifth">Gorillaz</td>
+                          </tr>
+                        </tbody>
+                      </table>
                 </div>
             </div>
-        </main>
+        </main>   
+
         <footer>
           <div class="footer">
             <div class="container">
@@ -54,17 +78,21 @@
                     Copyright MAK &#169;
                 </div>
                 <div class="footer-text top-artists">
-                    Today's top artist: <a href="top.html">Drake!</a> | <a href="top.html">See other top artists.</a>
+                    The current top artist is <a id="current-top-artist" href="top.html">Drake!</a> | <a id="go-to-top" href="top.html">See other top artists.</a>
                 </div>
             </div>
           </div>
         </footer>
+        
+        <!--Import Firebase-->
+        <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
         <!--Import Jquery-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
          <!--Import Materialize scripts-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-         <!--Import our scrips-->
+        <!--Import our scripts-->
         <script src="assets/js/script.js"></script>
+        <script src="assets/js/firebase.js"></script>
 
     </body>
 </html>

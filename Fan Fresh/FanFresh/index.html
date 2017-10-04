@@ -11,8 +11,8 @@
         <!--Import materialize.css-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
         <!--Import Our CSS-->
-        <link rel="stylesheet" href="Assets/css/style.css">
-        <link rel="stylesheet" href="Assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/style.css"><!--ks changed Assets to assets-->
+        <link rel="stylesheet" href="assets/css/reset.css"><!--ks changed Assets to assets-->
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
@@ -25,7 +25,8 @@
             <div id="top"></div>
             <div id="bottom"></div>
 
-            <div class="container">
+            <!--Top Navigation-->
+            <div class="container navigation-bar">
                 <div class="row top-search">
                     <div class="logo-right">
                         <a href="index.html"><img src="assets/img/logo.png"></a>
@@ -40,7 +41,8 @@
                 </div>
             </div>
             
-            <div class="container">
+            <!--Main Navigation-->
+            <div class="container body-content">
                 <div class="row main-search">
                     <div class="logo col s12">
                         <img src="assets/img/logo.png">
@@ -55,27 +57,36 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div id="fanpage" class="content col s12">
-                        <div id="artistPhoto" class="artistdetails col s12">
+                
+                <!--Fan Page Content-->
+                <div id="fanpage" class="container">
+                    <div class="row">
+                        <div id="artistPhoto" class="artistdetails col s4">
                             artistPhoto
                         </div>
-                        <div id="artistName" class="artistdetails col s3">
+                        <div id="artistName" class="artistdetails col s8 artist-name">
                             artistName
                         </div>
-                        <div class="col s7">
+                    </div>
+                    <div class="row">
+                        <div class="artistdetails col s12 artist-bio">
+                            <p class="bold">About</p>
+                            <p id="artistBio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent cursus pharetra turpis, in elementum dolor viverra in. Etiam tincidunt nisi in egestas feugiat. Donec tincidunt eget ex quis gravida. Sed ac enim enim. Suspendisse id tellus in nulla tristique tempor. Ut hendrerit efficitur vestibulum. Maecenas fermentum ut nibh at pellentesque.
+
+                            Sed ac consequat turpis. Donec id neque non ligula tristique ullamcorper in vel mi. Donec sed tincidunt enim, in vestibulum metus. Nulla id mattis justo. Praesent viverra porttitor sem, eu dapibus dui lobortis sed. Vivamus mollis nunc id leo ultrices ullamcorper. Nam aliquam viverra orci, nec ultricies metus scelerisque vel. Quisque pretium, lectus vitae aliquam dapibus, erat libero pellentesque sapien, non iaculis mi nisl dapibus quam.
+
+                            Donec rutrum orci dapibus, convallis tortor in, porttitor diam. Phasellus auctor velit sit amet enim hendrerit pharetra. Sed ut lacus sodales, tempor felis ut, venenatis urna. Fusce orci eros, pulvinar id fringilla id, sodales non mi. Pellentesque ac mi quis odio rhoncus ullamcorper. Maecenas tempus sapien augue, sit amet lobortis magna tristique ac. Morbi in lectus vitae lectus interdum tincidunt nec nec ex. Phasellus elementum laoreet elementum. Duis a eros libero.</p>
                         </div>
-                        <div id="artistBio" class="artistdetails col s10">
-<!-- Limit size and create scroll in box, expand line height.-->
-                            artistBio
-                        </div>
+                    </div>
+                    <div class="row">
                         <div id="additionalContent" class="artistdetails col s10">
                             additionalContent
                         </div>
                     </div>
                 </div>
             </div>
-        </main>   
+        </main>  
+        
         <footer>
           <div class="footer">
             <div class="container">
@@ -83,7 +94,7 @@
                     Copyright MAK &#169;
                 </div>
                 <div class="footer-text top-artists">
-                    Today's top artist: <a href="top.html">Drake!</a> | <a href="top.html">See other top artists.</a>
+                    The current top artist is <a id="current-top-artist" href="top.html">Drake!</a> | <a id="go-to-top" href="top.html">See other top artists.</a>
                 </div>
             </div>
           </div>
@@ -98,6 +109,10 @@
         <!--Import our scripts-->
         <script src="assets/js/script.js"></script>
         <script src="assets/js/firebase.js"></script>
+        <script src="assets/js/ytSearch.js"></script><!--added 
+        by Kevin 9/30 @12:20pm-->
+        <script src="https://apis.google.com/js/client.js?onload=init"></script><!--added 
+        by Kevin 10/01 @12:35am: Needed for the youTube api-->
 
     </body>
 </html>

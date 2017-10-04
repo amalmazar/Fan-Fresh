@@ -19,7 +19,7 @@ var searchesSorted = [];
 
 database.ref("/search").on('value',function(snapshot) {
     searches = snapshot.val();
-//    console.log(searches);
+   
   
     if(searches){
         searchesSorted = Object.values(searches).sort(sortSearches);
@@ -27,11 +27,27 @@ database.ref("/search").on('value',function(snapshot) {
     }
     
 //   console.log(searchesSorted);
+    
+    //NEW FIREBASE FOR TOP ARTISTS
     console.log(searchesSorted[0]);
     console.log(searchesSorted[1]);
     console.log(searchesSorted[2]);
+    console.log(searchesSorted[3]);
+    console.log(searchesSorted[4]);
+                    
+    $("#first").replaceWith(searchesSorted[0].name )
+    $("#second").replaceWith(searchesSorted[1].name )
+    $("#third").replaceWith(searchesSorted[2].name )
+    $("#fourth").replaceWith(searchesSorted[3].name )
+    $("#fifth").replaceWith(searchesSorted[4].name )
     
+    $("#current-top-artist").replaceWith(searchesSorted[0].name)
+  
 });
+
+
+ //END NEW FIREBASE FOR TOP ARTISTS
+    
 
 function addSearchClicks(whichinput, whichdiv) {
     $(whichdiv).keyup(function(event) {
@@ -39,8 +55,8 @@ function addSearchClicks(whichinput, whichdiv) {
         var clickCounter = 0;
         
         if(event.keyCode == 13) {
-          var artistName = $(whichinput).val().trim();
-
+          var artistName = $(whichinput).val().trim().toLowerCase();
+           
             if (searches && searches[artistName]){
                 clickCounter = searches[artistName].click;
             }   
@@ -64,3 +80,5 @@ function sortSearches (a,b) {
     return b.click - a.click;
     
 }
+
+//Nice to Have: create a function that pushes the current top artist to #current-top-artist and changes the href link to build a fan page for the current top artist
