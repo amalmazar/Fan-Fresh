@@ -35,35 +35,14 @@ database.ref("/search").on('value',function(snapshot) {
     console.log(searchesSorted[3]);
     console.log(searchesSorted[4]);
                     
-    $("#first").replaceWith(searchesSorted[0].name)
-    $("#second").replaceWith(searchesSorted[1].name)
-    $("#third").replaceWith(searchesSorted[2].name)
-    $("#fourth").replaceWith(searchesSorted[3].name)
-    $("#fifth").replaceWith(searchesSorted[4].name)
-    
-//    updateTopArtist(searchesSorted[0].name);
+    $("#first").replaceWith(searchesSorted[0].name )
+    $("#second").replaceWith(searchesSorted[1].name )
+    $("#third").replaceWith(searchesSorted[2].name )
+    $("#fourth").replaceWith(searchesSorted[3].name )
+    $("#fifth").replaceWith(searchesSorted[4].name )
     $("#current-top-artist").replaceWith(searchesSorted[0].name)
-    $("#current-top-artist").css("text-transform", "uppercase");
   
 });
-
-// Trying to write a function to update the top artist and make the link populate the page with that artist's info.
-//function updateTopArtist(topArtist, topArtistName) {
-//    
-//    var queryURL = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + topArtist + "&api_key=3ff3b259d85abca5d13695ff68bfbe51&format=json";
-//    
-//    // Performing an AJAX request with the queryURL
-//    $.ajax({
-//      url: queryURL,
-//      method: "GET"
-//    })
-//    // After data comes back from the request
-//    .done(function(response) {
-//      console.log(queryURL);
-//      $("#current-top-artist").replaceWith("<a href=" + queryURL + ">" + topArtistName + "!")
-//    });
-//};
-
 
  //END NEW FIREBASE FOR TOP ARTISTS
     
@@ -99,7 +78,3 @@ function sortSearches (a,b) {
     return b.click - a.click;
     
 }
-
-
-
-//Nice to Have: create a function that pushes the current top artist to #current-top-artist and changes the href link to build a fan page for the current top artist

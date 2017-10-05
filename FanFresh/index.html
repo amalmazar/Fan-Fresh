@@ -18,7 +18,7 @@
     </head>
 
     <body>
-        <main class="page">
+        <main>
             <!--Page Borders-->
             <div id="left"></div>
             <div id="right"></div>
@@ -32,7 +32,7 @@
                         <a href="index.html"><img src="assets/img/logo.png"></a>
                     </div>
                     <div id="topSearch" class="input-field z-depth-1 top-left">
-                        <input id="user-input-main" type="search" placeholder="Search for your favorite artist" required>
+                        <input id="user-input-top" type="search" required>
                         <label class="label-icon" for="search">
                             <i class="material-icons">search</i>
                         </label>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="content col s12">
                         <div id="mainSearch" class="input-field z-depth-1 center">
-                          <input id="user-input-main" type="search" placeholder="Search for your favorite artist" required>
+                          <input id="user-input-main" type="search" required>
                             <label class="label-icon" for="search">
                                 <i class="material-icons">search</i>
                             </label>
@@ -64,7 +64,7 @@
                         <div id="artistPhoto" class="artistdetails col s4">
                             artistPhoto
                         </div>
-                        <div id="artistName" class="artistdetails col s8 artist-name">
+                        <div id="artistName" class="artistdetails col s6 artist-name">
                             artistName
                         </div>
                     </div>
@@ -89,16 +89,15 @@
         
         <footer>
           <div class="footer">
-            <div class="container of-the-foot">
+            <div class="container">
                 <div class="footer-text copyright">
                     Copyright MAK &#169;
                 </div>
                 <div class="footer-text top-artists">
-                    The current top artist is <div id="current-top-artist">Drake!</div> | <a id="go-to-top" href="top.html">See other top artists.</a>
+                    <a id="go-to-top" href="top.html">Check out the top artists.</a>
                 </div>
             </div>
           </div>
-        </footer>
         
         <!--Import Firebase-->
         <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
