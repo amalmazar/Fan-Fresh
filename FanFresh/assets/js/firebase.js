@@ -35,14 +35,15 @@ database.ref("/search").on('value',function(snapshot) {
     console.log(searchesSorted[3]);
     console.log(searchesSorted[4]);
                     
-    $("#first").replaceWith(searchesSorted[0].name )
-    $("#second").replaceWith(searchesSorted[1].name )
-    $("#third").replaceWith(searchesSorted[2].name )
-    $("#fourth").replaceWith(searchesSorted[3].name )
-    $("#fifth").replaceWith(searchesSorted[4].name )
+    $("#first").replaceWith(searchesSorted[0].name)
+    $("#second").replaceWith(searchesSorted[1].name)
+    $("#third").replaceWith(searchesSorted[2].name)
+    $("#fourth").replaceWith(searchesSorted[3].name)
+    $("#fifth").replaceWith(searchesSorted[4].name)
     
 //    updateTopArtist(searchesSorted[0].name);
     $("#current-top-artist").replaceWith(searchesSorted[0].name)
+    $("#current-top-artist").css("text-transform", "uppercase");
   
 });
 
