@@ -52,6 +52,7 @@ function populateBio(bio) {
     $("#artistBio").html(bio);
 };
 
+
 createFanPageMain();
 createFanPageTop();
 

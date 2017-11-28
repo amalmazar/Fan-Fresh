@@ -9,49 +9,20 @@ Very Light Grey: #fcfcfc;
 Medium Grey: #f2f2f2;
 */
 
-/*//////////////////////// GLOBAL BODY STYLES ////////////////////////////////*/
+/*/ BODY STYLES FOR ALL PAGES ////////////////////////////////*/
 
-    @-webkit-keyframes rainbow {
-        0%{background-position:0% 82%}
-        50%{background-position:100% 19%}
-        100%{background-position:0% 82%}
-    }
-    @-moz-keyframes rainbow {
-         0%{background-position:0% 82%}
-        50%{background-position:100% 19%}
-        100%{background-position:0% 82%}
-    }
-    @-o-keyframes rainbow {
-         0%{background-position:0% 82%}
-        50%{background-position:100% 19%}
-        100%{background-position:0% 82%}
-    }
-    @keyframes rainbow { 
-        0%{background-position:0% 82%}
-        50%{background-position:100% 19%}
-        100%{background-position:0% 82%}
-    }
+/* Text */
 
-html, body{
-    font-family: 'Open Sans', sans-serif !important;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    background:linear-gradient(124deg, #daecf3, 
-         #f2f2f2, #daecf3, #fff, #daecf3);
-        background-size: 100% 1800%;
-        -webkit-animation: rainbow 18s ease infinite;
-        -z-animation: rainbow 18s ease infinite;
-        -o-animation: rainbow 18s ease infinite;
-          animation: rainbow 18s ease infinite;}
+.bigText {
+    font-size: 35px;
+    text-transform: capitalize;
 }
 
- main {
-    flex: 1 0 auto;
-    margin-bottom: 200px;
-  }
-
+p {
+    line-height: 25px !important;
+}
 /* Links */
+
 a {
     color: #b8f0f7;
 }
@@ -60,6 +31,24 @@ a:hover {
 }
 
 /* Container */
+
+html, body{
+    font-family: 'Open Sans', sans-serif !important;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background:linear-gradient(124deg, #daecf3, #f2f2f2, #daecf3, #fff, #daecf3);
+    background-size: 100% 1800%;
+    -webkit-animation: rainbow 18s ease infinite;
+    -z-animation: rainbow 18s ease infinite;
+    -o-animation: rainbow 18s ease infinite;
+    animation: rainbow 18s ease infinite;}
+}
+
+ main {
+    flex: 1 0 auto;
+    margin-bottom: 200px;
+  }
 
 body {
     width: 100% !important;
@@ -70,13 +59,13 @@ body {
     animation: none;
 }
 
+row {
+    margin: 20px;
+}
+
 .body-content {
     width: 100% !important;
     height: 100%;
-}
-
-.navigation-bar {
-    width: 95%;
 }
 
 /* Table styles */
@@ -109,7 +98,6 @@ th, td {
     padding-bottom: 5px;
 }
 /* Footer styles */
-
 .footer {
     left: 0;
     bottom: 0;
@@ -117,7 +105,7 @@ th, td {
     margin: 0px auto;
     padding: 50px 30px 10px 30px;
     overflow: hidden;
-    z-index: 0;
+    z-index: 2;
     text-align: left;
     font-weight: 300;
     font-size: 90%;
@@ -148,7 +136,7 @@ th, td {
 }
 
 
-/*//////////////////////////////// BODY STYLES ////////////////////////////////*/
+/*//////////////////////////////// HOME PAGE STYLES ////////////////////////////////*/
 
 /* Index page search bar styles */
 .center {
@@ -156,7 +144,7 @@ th, td {
     margin: 100px auto;
 }
 
-/* box holding the main search bar and logo */
+/* Box holding the main search bar and logo */
 .main-search {
     width: 100%;
     margin: 20px auto;
@@ -164,22 +152,31 @@ th, td {
     display: block;
 }
 
-/* Styles for the index page logo */
 .logo {
     text-align: center;
     margin-top: 30px;
 }
+
 .logo img {
     width: 300px;
 }
 
-/*//////////////////////////////////////// Top navigation ////////////////////////////////////////*/
+/*TOP NAVIGATION FOR INDEX / HOME PAGE ///////////////////////////////////*/
+
 /* Transparent box holding all the top navigation elements */
 
+.nav-wrapper .input-field input[type=search] {
+    height: 50px;
+}
 .top-search {
     width: 100%;
     padding: 20px;
     display: none;
+}
+
+/* Container holding the navigation */
+.nav-wrapper {
+    width: 95%;
 }
 
 /* Logo */
@@ -192,7 +189,7 @@ th, td {
 }
 .top-left {
     margin: 10px 5px;
-    width: 300px;
+    width: 20%;
 }
 
 /* Search bar */
@@ -208,7 +205,7 @@ th, td {
     text-align: center;
 }
 
-/*////////////////////////////////// Fan Page Elements /////////////////////*/
+/*Fan Page Elements /////////////////////*/
 
 #fanpage {
     display: none;
@@ -275,19 +272,53 @@ th, td {
     width: 100%;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.26);
 }
+/*///////////// SIGN UP PAGE STYLES ///////*/
 
-/*//////////////// LABELS FOR THE SEARCH BAR STYLES ///////////*/
-
-/* label color */
-.input-field label {
-     color: #daecf3;
-   }
-/* label focus color */
-.input-field input[type=text]:focus + label, .input-field:focus label {
-    display: none;
+#sign-up /*button*/ {
+    background-color: #ff404e !important;
 }
 
-/*/////////////////////////////// PAGE BORDERS-Please don't touch. /////////////////////////////////*/
+#log-in /*button*/ {
+    background-color: #daecf3 !important;
+}
+
+.sign-up-page {
+    /* margin: 100px, 100px !important;*/
+    width: 500px;
+    position: fixed;
+    height: 100vh;
+    padding: 75px;
+    z-index: 1;
+    overflow: auto;
+    margin-bottom: 200px;
+}
+
+.graphics {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+img {
+    display: inline;
+}
+.iphone {
+    height: 300px;
+    left: 500px;
+    bottom: 0;
+    z-index: 1;
+    position: absolute;
+}
+
+.desktop {
+    height: 400px;
+    left: 600px;
+    bottom: 0;
+    z-index: 0;
+    position: absolute;
+}
+
+/* PAGE BORDERS-Please don't touch. /////////////////////////////////*/
 
 /*Resize the wrap to see the search bar change!*/
 .wrap{
@@ -336,5 +367,29 @@ only screen and (max-width: 500px),
 only screen and (min-device-width: 768px) and (max-device-width: 1024px) 
 
 {
-	#top, #bottom, #left, #right { display: none; }
+	.graphics, #top, #bottom, #left, #right { display: none; }
+    
 }
+
+/*///////////////// SHADED BG EFFECTS /////////////*/
+
+    @-webkit-keyframes rainbow {
+        0%{background-position:0% 82%}
+        50%{background-position:100% 19%}
+        100%{background-position:0% 82%}
+    }
+    @-moz-keyframes rainbow {
+         0%{background-position:0% 82%}
+        50%{background-position:100% 19%}
+        100%{background-position:0% 82%}
+    }
+    @-o-keyframes rainbow {
+         0%{background-position:0% 82%}
+        50%{background-position:100% 19%}
+        100%{background-position:0% 82%}
+    }
+    @keyframes rainbow { 
+        0%{background-position:0% 82%}
+        50%{background-position:100% 19%}
+        100%{background-position:0% 82%}
+    }

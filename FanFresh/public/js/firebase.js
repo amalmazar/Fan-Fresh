@@ -35,13 +35,12 @@ database.ref("/search").on('value',function(snapshot) {
     console.log(searchesSorted[3]);
     console.log(searchesSorted[4]);
                     
-    $("#first").replaceWith(searchesSorted[0].name )
-    $("#second").replaceWith(searchesSorted[1].name )
-    $("#third").replaceWith(searchesSorted[2].name )
-    $("#fourth").replaceWith(searchesSorted[3].name )
-    $("#fifth").replaceWith(searchesSorted[4].name )
+    $("#first").replaceWith(searchesSorted[0].name)
+    $("#second").replaceWith(searchesSorted[1].name)
+    $("#third").replaceWith(searchesSorted[2].name)
+    $("#fourth").replaceWith(searchesSorted[3].name)
+    $("#fifth").replaceWith(searchesSorted[4].name)
     $("#current-top-artist").replaceWith(searchesSorted[0].name)
-  
 });
 
  //END NEW FIREBASE FOR TOP ARTISTS
@@ -78,3 +77,21 @@ function sortSearches (a,b) {
     return b.click - a.click;
     
 }
+
+// This is the code to swap the top artists on the index page 
+var counter = 0;
+var htmlTextToFlip = $("#flipper");
+setInterval(flipIt, 2000);
+
+console.log(searchesSorted[counter].name);
+
+function flipIt() {
+    // This function takes the id of flipper in our DOM and changes the inner html to the five current top artists and starts over when it gets to the fifth one.
+    htmlTextToFlip.html(searchesSorted[counter].name);
+    counter++;
+    
+    if (counter >= 5) {
+        counter = 0;
+    }
+}
+

@@ -3,7 +3,9 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
-var http = require('http');
+var exphbs = require("express-handlebars");
+
+
 
 // Sets up the Express App
 // =============================================================
@@ -17,16 +19,33 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+
+
+// Set Handlebars as the default templating engine
+// =============================================================
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
+
+
 // Routes
 // =============================================================
 // Basic route that sends the user to the index page
 app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "views/index.html"));
+    res.render("index");
 });
-// Route that sends the user to the top page
+
+// Route that sends the user to the top artists page
 app.get("/top", function(req, res) {
-  res.sendFile(path.join(__dirname, "views/top.html"));
+  res.render("top");
 });
+
+// Route that sends the user to the main search page (this is where they will go after they log in)
+app.get("/home", function(req, res) {
+  res.render("home");
+});
+
+
 
 // Starts the server to begin listening
 // =============================================================
