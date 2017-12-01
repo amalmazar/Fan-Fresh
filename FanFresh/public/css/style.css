@@ -18,16 +18,28 @@ Medium Grey: #f2f2f2;
     text-transform: capitalize;
 }
 
+.bigLobsterText {
+    font-size: 45px;
+    font-family: lobster;
+    color: #012d41;
+    margin-bottom: 10px;
+}
+
 p {
     line-height: 25px !important;
 }
-/* Links */
+/* Links and buttons */
 
 a {
     color: #b8f0f7;
 }
+
 a:hover {
     color: #1ca5b8;
+}
+
+.btn:hover {
+    color: #012d41 !important;
 }
 
 /* Container */
@@ -42,7 +54,7 @@ html, body{
     -webkit-animation: rainbow 18s ease infinite;
     -z-animation: rainbow 18s ease infinite;
     -o-animation: rainbow 18s ease infinite;
-    animation: rainbow 18s ease infinite;}
+    animation: rainbow 18s ease infinite;
 }
 
  main {
@@ -135,6 +147,20 @@ th, td {
     display: inline;
 }
 
+/*//////////////////////////////// FAN PAGE STYLES ////////////////////////////////*/
+
+#favorite {
+    left: 200px;
+    top: 275px;
+}
+
+#favorite i:hover {
+    color: #ff404e;
+}
+
+#favorite i {
+    font-size: 50px
+}
 
 /*//////////////////////////////// HOME PAGE STYLES ////////////////////////////////*/
 
@@ -168,15 +194,11 @@ th, td {
 .nav-wrapper .input-field input[type=search] {
     height: 50px;
 }
+
 .top-search {
     width: 100%;
     padding: 20px;
     display: none;
-}
-
-/* Container holding the navigation */
-.nav-wrapper {
-    width: 95%;
 }
 
 /* Logo */
@@ -188,8 +210,7 @@ th, td {
     width: 200px;
 }
 .top-left {
-    margin: 10px 5px;
-    width: 20%;
+    width: 200px;
 }
 
 /* Search bar */
@@ -273,13 +294,43 @@ th, td {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.26);
 }
 /*///////////// SIGN UP PAGE STYLES ///////*/
+/* Form color adjustments */
 
-#sign-up /*button*/ {
-    background-color: #ff404e !important;
+.modal-footer {
+    background: none !important;
 }
 
-#log-in /*button*/ {
+/* label focus color */
+ .input-field input:focus + label {
+   color: #ff404e !important;
+ }
+
+ /* label underline focus color */
+ .row .input-field input:focus {
+   border-bottom: 1px solid #ff404e !important;
+   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.13);
+ }
+
+#signUp, #submitSignUp, #submitLogIn /*button*/ {
+    background-color: #ff404e !important;
+    color: #fff !important;
+}
+
+#signUp:hover, #submitSignUp:hover, #submitLogIn:hover {
+    color: #012d41 !important;
+}
+
+#logIn /*button*/ {
     background-color: #daecf3 !important;
+}
+
+.modal {
+    border: 6px solid #ff404e !important;
+    padding: 20px !important;
+    background-color: rgba(255, 255, 255, 0.88) !important;
+    border-radius: 0px !important;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.13) !important;
+    overflow: scroll !important;
 }
 
 .sign-up-page {
@@ -293,26 +344,22 @@ th, td {
     margin-bottom: 200px;
 }
 
-.graphics {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-}
-
 img {
     display: inline;
 }
 .iphone {
-    height: 300px;
-    left: 500px;
+    height: 400px;
+    width: auto;
+    left: 600px;
     bottom: 0;
     z-index: 1;
     position: absolute;
 }
 
 .desktop {
-    height: 400px;
-    left: 600px;
+    height: 500px;
+    width: auto;
+    left: 700px;
     bottom: 0;
     z-index: 0;
     position: absolute;
