@@ -26,14 +26,14 @@ database.ref("/search").on('value',function(snapshot) {
 
     }
     
-    //   console.log(searchesSorted);
+//   console.log(searchesSorted);
     
     //NEW FIREBASE FOR TOP ARTISTS
-    //    console.log(searchesSorted[0]);
-    //    console.log(searchesSorted[1]);
-    //    console.log(searchesSorted[2]);
-    //    console.log(searchesSorted[3]);
-    //    console.log(searchesSorted[4]);
+//    console.log(searchesSorted[0]);
+//    console.log(searchesSorted[1]);
+//    console.log(searchesSorted[2]);
+//    console.log(searchesSorted[3]);
+//    console.log(searchesSorted[4]);
                     
     $("#first").replaceWith(searchesSorted[0].name)
     $("#second").replaceWith(searchesSorted[1].name)
@@ -83,9 +83,11 @@ var counter = 0;
 var htmlTextToFlip = $("#flipper");
 setInterval(flipIt, 2000);
 
+//console.log(searchesSorted[counter].name);
+
 function flipIt() {
     // This function takes the id of flipper in our DOM and changes the inner html to the five current top artists and starts over when it gets to the fifth one.
-    htmlTextToFlip.html(searchesSorted[counter].artistName);
+    htmlTextToFlip.html(searchesSorted[counter].name);
     counter++;
     
     if (counter >= 5) {

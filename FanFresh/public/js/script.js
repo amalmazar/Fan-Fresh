@@ -5,9 +5,9 @@ function createFanPageMain() {
             // show fanpage content
             $("#fanpage").css("display","block");
             // hide main search and logo
-            $(".main-search").css("display", "none");
+            $(".homeSearch").css("display", "none");
             //show top search and logo
-            $(".top-search").css("display", "block");
+            $(".topNav").css("display", "inline-block");
         };
     });
 };
@@ -19,7 +19,26 @@ function createFanPageTop() {
         };
     });
 };
-        
+
+//function getTopAlbums(searchSpot) {
+//    
+//    var artist = $(searchSpot).val().trim();
+//    
+//    var queryURL = "http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=" + artist + "&api_key=3ff3b259d85abca5d13695ff68bfbe51&format=json";
+//    
+//    // Performing an AJAX request with the queryURL
+//    $.ajax({
+//      url: queryURL,
+//      method: "GET"
+//    })
+//    // After data comes back from the request
+//    .done(function(response) {
+//      console.log(response);
+//      console.log(queryURL);
+//      console.log(artist);
+//    });
+//}
+
 function getArtist(whichInput) {
     // Constructing a queryURL
     var artist = $(whichInput).val().trim();
@@ -57,9 +76,11 @@ $('#favorite').click(function() {
     if ($(this).find('i').html('favorite_border')) {
         $(this).find('i').html('favorite');
         $(this).find('i').css("color", "#ff404e");
+        console.log("clicked with favorite_border");
     } else {
         $(this).find('i').html('favorite_border');
         $(this).find('i').css("color", "#fff");
+        console.log("clicked with favorite");
     }
 });
 
@@ -67,4 +88,5 @@ $('#favorite').click(function() {
 
 createFanPageMain();
 createFanPageTop();
+
 
