@@ -55,11 +55,13 @@ html, body{
     -z-animation: rainbow 18s ease infinite;
     -o-animation: rainbow 18s ease infinite;
     animation: rainbow 18s ease infinite;
+    overflow-x: hidden !important;
 }
 
- main {
+main {
     flex: 1 0 auto;
-     margin-bottom: 200px;
+    margin-bottom: 200px;
+    overflow-y: hidden !important;
   }
 
 body {
@@ -179,6 +181,10 @@ th, td {
 
 .logo img {
     width: 300px;
+}
+
+.login {
+    margin: 50px auto;
 }
 
 /*TOP NAVIGATION FOR INDEX / HOME PAGE ///////////////////////////////////*/
@@ -314,12 +320,12 @@ th, td {
    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.13);
  }
 
-#signUp, #submitSignUp, #submitLogIn /*button*/ {
+#signUp, #submitSignUp, #submitLogIn, .fanFreshButton /*button*/ {
     background-color: #ff404e !important;
     color: #fff !important;
 }
 
-#signUp:hover, #submitSignUp:hover, #submitLogIn:hover {
+#signUp:hover, #submitSignUp:hover, #submitLogIn:hover, .fanFreshButton:hover {
     color: #012d41 !important;
 }
 
@@ -350,6 +356,11 @@ th, td {
 img {
     display: inline;
 }
+
+.graphics {
+    overflow: hidden !important;
+}
+
 .iphone {
     height: 400px;
     width: auto;

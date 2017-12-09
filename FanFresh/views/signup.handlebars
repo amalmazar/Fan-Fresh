@@ -1,23 +1,70 @@
-<!DOCTYPE html>
-<html>
- 
-<head>
-    <title></title>
-</head>
- 
-<body>
-    <form id="signup" name="signup" method="post" action="/signup">
-        <label for="email">Email Address</label>
-        <input class="text" name="email" type="email" />
-        <label for="firstname">Firstname</label>
-        <input name="firstname" type="text" />
-        <label for="lastname">Lastname</label>
-        <input name="lastname" type="text" />
-        <label for="password">Password</label>
-        <input name="password" type="password" />
-        <input class="btn" type="submit" value="Sign Up" />
+<div class="container login">
+    <div class="container navigation-bar">
+        <div style="display: block;" class="row top-search">
+            <div class="logo-right">
+            <a href="/"><img src="/img/logo.png"></a>
+        </div>
+        </div>
+    </div>
+    <div class="bigLobsterText">Sign Up</div>
+    <div class="row">
+    <form id="signup" name="signup" method="post" action="/signup" class="col s12">
+        <div class="row">
+            <div class="input-field col s12">
+                <label for="email">Email Address</label>
+                <input class="text" name="email" type="email" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <label for="firstname">Firstname</label>
+                <input name="firstname" type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <label for="lastname">Lastname</label>
+                <input name="lastname" type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <label for="password">Password</label>
+                <input name="password" type="password" />
+                <input class="waves-effect waves-light btn fanFreshButton" type="submit" value="Sign Up"/>
+            </div>
+        </div>
     </form>
- 
-</body>
- 
-</html>
+    </div>
+</div>
+
+<!--
+<div class="container login">//
+    <div class="container navigation-bar">//
+        <div style="display: block;" class="row top-search">//
+            <div class="logo-right">//
+                <a href="/"><img src="/img/logo.png"></a>//
+            </div>
+        </div>
+    </div>
+    <div class="bigLobsterText">Log In</div>//
+    <div class="row">//
+        <form id="signin" name="signin" method="post" action="signin" class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <label for="email">Email Address</label>
+                    <input class="text" name="email" type="text"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <label for="password">Password</label>
+                    <input name="password" type="password" />
+                    <input class="waves-effect waves-light btn fanFreshButton" type="submit" value="Sign In"/>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+-->
+
